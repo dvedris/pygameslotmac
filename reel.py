@@ -10,16 +10,13 @@ class Reel:
 
         self.reel_is_spinning = False
 
-        #Sounds
-        # self.stop_sound = pygame.mixer.Sound(audio/stop.mp3)
-        #self.stop_sound.set_volume(0.5)
-
+        pos = list(pos)
+        margin = 110
+        initial_y = margin + 150
+        row_spacing = 50
         for idx, item in enumerate(self.shuffled_keys):
-            self.symbol_list.add(Symbol(symbols[item], pos, idx))
-            pos = list(pos)
-            pos[1] += 300
-            pos = tuple(pos)
-
+            self.symbol_list.add(Symbol(symbols[item], (pos[0], initial_y), idx))
+            initial_y += 50 + row_spacing
 class Symbol(pygame.sprite.Sprite):
     def __init__(self, pathToFile, pos, idx):
         super(). __init__()

@@ -15,10 +15,18 @@ class Machine:
         if not self.reel_list:
             x_topleft, y_topleft = 10, -300
         while self.reel_index < 5:
-            if self.reel_index > 0:
-                x_topleft, y_topleft = x_topleft + (300 + X_OFFSET), y_topleft
-
-            self.reel_list[self.reel_index] = Reel((x_topleft, y_topleft)) # Need to create reel class
+            if self.reel_index == 0:
+                x_topleft += 143 
+            elif self.reel_index == 1:
+                x_topleft -= 143 
+            elif self.reel_index == 2:
+                x_topleft -= 143
+            elif self.reel_index == 3:
+                x_topleft -= 143 
+            elif self.reel_index == 4:
+                x_topleft -= 143 
+            self.reel_list[self.reel_index] = Reel((x_topleft, y_topleft))
+            x_topleft += 300
             self.reel_index += 1
 
     def update(self,delta_time):
