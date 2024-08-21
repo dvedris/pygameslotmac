@@ -11,6 +11,12 @@ BG_IMAGE_PATH = 'graphics/neon/pozadina.jpg'
 GAME_INDICES = [1, 2, 3] # 0 and 4 are outside of play area
 SYM_PATH = 'graphics/0/symbols'
 
+# Text
+TEXT_COLOR = 'White'
+UI_FONT = 'graphics/font/font.ttf'
+UI_FONT_SIZE = 30
+WIN_FONT_SIZE = 110
+
 # 5 Symbols for testing
 symbols = {
     'zeus': f"{SYM_PATH}/0_zeus.png",
